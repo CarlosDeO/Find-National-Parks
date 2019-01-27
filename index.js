@@ -38,10 +38,7 @@ function getNationalParks(searchTerm, maxResult) {
     const queryString = formatQueryParams(params)
     const url = searchURL + '?' + queryString ;
     console.log(url);
-    // const options = {
-    //     header: new Headers({
-    //         "X-Api-Key": apiKey})
-    // };
+    
     fetch(url)
     .then(response => response.json())
     .then(responseJson => displayResults(responseJson));
